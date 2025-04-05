@@ -2,7 +2,6 @@ import csv
 
 pathFile = input("Ingrese la ruta del archivo CSV: ")
 def procesar_datos(input_file=pathFile):
-    ruts_vistos = set()  
     output_file='Salida-1.sql'
     
     with open(input_file, mode='r', newline='', encoding='utf-8') as infile, \
@@ -18,10 +17,6 @@ def procesar_datos(input_file=pathFile):
             Direccion = row[3].strip()
 
             RUT = RUT.zfill(10)
-
-            if RUT in ruts_vistos:
-                continue  
-            ruts_vistos.add(RUT) 
 
             if len(Edad) == 1:
                 Edad = '0' + Edad 

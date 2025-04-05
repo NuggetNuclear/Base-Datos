@@ -8,7 +8,7 @@ def procesar_datos(input_file=pathFile):
          open(output_file, mode='w', newline='', encoding='utf-8') as outfile:
         
         reader = csv.reader(infile)
-        outfile.write("INSERT INTO persona1 (RUT, Nombre, Edad, Direccion) VALUES\n")
+        outfile.write("INSERT INTO persona2 (RUT, Nombre, Edad, Direccion) VALUES\n")
 
         ruts_vistos = set()
         primera_linea = True
